@@ -4,16 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="sortaroo-logo.png">
-
+<link rel="icon" href="sortaroo-logo.png" type="image/png">
 <title>Sortaroo — Photo and Video Organization</title>
-<meta name="description" content="Organize your photos and videos with Sortaroo. Available for iPhone, Mac and Windows. Coming soon to Android.">
+<meta name="description" content="Organize photos and videos with Sortaroo for iPhone, Mac and Windows. Android coming soon.">
 
 <style>
 :root {
   --ink:#23364d;
   --paper:#f7faff;
-  --lime:#dceeff;
   --muted:#65768c;
 }
 * {box-sizing:border-box}
@@ -26,24 +24,23 @@ body {
 }
 a {color:inherit;text-decoration:none}
 .wrap {max-width:1180px;margin:auto;padding:0 32px}
-
 nav {
-  height:100px;
+  min-height:100px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   border-bottom:1px solid #dde6f0;
 }
 .logo {
-  font-size:29px;
-  letter-spacing:-1.5px;
-  font-weight:800;
   display:inline-flex;
   align-items:center;
   gap:10px;
+  font-size:29px;
+  font-weight:800;
+  letter-spacing:-1.5px;
 }
-.logo img {display:block;border-radius:10px}
-.links {display:flex;align-items:center;gap:32px;font-size:14px}
+.logo img {border-radius:10px}
+.links {display:flex;align-items:center;gap:30px;font-size:14px}
 .btn {
   display:inline-flex;
   align-items:center;
@@ -54,7 +51,6 @@ nav {
   color:white;
   font-weight:600;
   font-size:14px;
-  gap:12px;
 }
 .hero {
   display:grid;
@@ -70,16 +66,16 @@ nav {
   text-transform:uppercase;
 }
 .eyebrow:before {
-  content:'';
+  content:"";
   display:inline-block;
-  width:7px;
-  height:7px;
+  width:8px;
+  height:8px;
   border-radius:50%;
   background:#3c8edb;
   margin-right:10px;
 }
 h1 {
-  font-size:clamp(48px,5.7vw,76px);
+  font-size:clamp(45px,5.7vw,76px);
   letter-spacing:-4px;
   line-height:1.02;
   margin:25px 0;
@@ -90,8 +86,14 @@ h1 em {
   color:#2878c5;
 }
 p {line-height:1.65}
-.intro {max-width:410px;font-size:18px;color:var(--muted)}
-.actions {display:flex;gap:18px;align-items:center;margin:30px 0 16px}
+.intro {max-width:430px;font-size:18px;color:var(--muted)}
+.actions {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin:30px 0 16px;
+}
 .quiet {font-size:12px;color:var(--muted)}
 .video-feature {min-width:0}
 .video-frame {
@@ -101,7 +103,11 @@ p {line-height:1.65}
   overflow:hidden;
   box-shadow:0 18px 45px #23364d18;
 }
-.video-frame iframe {width:100%;height:100%;border:0;display:block}
+.video-frame iframe {
+  width:100%;
+  height:100%;
+  border:0;
+}
 .video-caption {
   display:flex;
   justify-content:space-between;
@@ -110,23 +116,23 @@ p {line-height:1.65}
   color:var(--muted);
   margin-top:16px;
 }
-.video-caption a {text-decoration:underline;text-underline-offset:3px}
+.video-caption a {text-decoration:underline}
 .strip {
   display:flex;
   justify-content:center;
-  gap:60px;
+  gap:55px;
+  flex-wrap:wrap;
   border-top:1px solid #dde6f0;
   border-bottom:1px solid #dde6f0;
   padding:25px;
   font-size:12px;
   font-weight:600;
 }
-.section {padding:90px 0}
+.section {padding:85px 0}
 .section h2 {
-  font-size:46px;
+  font-size:clamp(32px,4vw,46px);
   letter-spacing:-2px;
   line-height:1.1;
-  margin:18px 0 25px;
 }
 .steps {
   display:grid;
@@ -136,7 +142,7 @@ p {line-height:1.65}
 }
 .step {border-top:1px solid #b9cde1;padding-top:22px}
 .num {font-family:Georgia,serif;color:#3c8edb;font-size:32px}
-.step h3 {font-size:21px;letter-spacing:-.5px}
+.step h3 {font-size:21px}
 .step p {font-size:15px;color:var(--muted)}
 .story {
   background:#e9f2fc;
@@ -147,6 +153,7 @@ p {line-height:1.65}
   gap:65px;
   align-items:center;
 }
+.story p {color:var(--muted)}
 .tree {
   background:var(--paper);
   border-radius:12px;
@@ -156,8 +163,7 @@ p {line-height:1.65}
   line-height:2.2;
   box-shadow:0 15px 30px #23364d0a;
 }
-.tree strong {font-family:Arial,sans-serif}
-.tree .indent {
+.indent {
   padding-left:24px;
   border-left:1px solid #c7d8ea;
   margin-left:8px;
@@ -167,60 +173,206 @@ p {line-height:1.65}
   letter-spacing:1px;
   text-transform:uppercase;
   color:var(--muted);
-}
-.download {
-  background:linear-gradient(135deg,#1e4d80,#2878c5);
-  color:var(--paper);
-  border-radius:20px;
-  padding:60px;
   text-align:center;
 }
-.download h2 {font-size:48px;margin:15px 0}
-.download p {color:#c5d6e8}
+
+/* NEW VISUAL DOWNLOAD SECTION */
+
+.download {
+  background:linear-gradient(125deg,#07386f 0%,#0756a2 53%,#117cdb 100%);
+  color:white;
+  border-radius:24px;
+  padding:58px 38px 42px;
+  text-align:center;
+  overflow:hidden;
+}
+.download h2 {
+  font-size:clamp(32px,4.6vw,55px);
+  letter-spacing:-2px;
+  margin:18px 0;
+}
+.download>p {color:#d1e8ff;font-size:17px}
 .platforms {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  max-width:760px;
+  gap:18px;
   margin:35px auto 0;
-  gap:20px;
 }
 .platform {
-  border:1px solid #ffffff30;
-  border-radius:12px;
-  padding:25px;
+  position:relative;
+  isolation:isolate;
+  min-height:315px;
+  overflow:hidden;
+  padding:30px;
+  border:1px solid #ffffff65;
+  border-radius:20px;
   text-align:left;
+  box-shadow:0 12px 26px #002a5530;
 }
-.platform h3 {margin:0 0 10px;font-size:23px}
+.platform.iphone {
+  background:linear-gradient(135deg,#0864b9,#32a8fb);
+}
+.platform.android {
+  background:linear-gradient(130deg,#08616d,#0d897c 65%,#69d67c);
+}
+.platform.mac {
+  background:linear-gradient(130deg,#283ba4,#6859df 65%,#9c78f7);
+}
+.platform.windows {
+  background:linear-gradient(130deg,#0873bf,#159af1 65%,#42b2ff);
+}
+.platform-copy {
+  position:relative;
+  z-index:2;
+  width:64%;
+  max-width:330px;
+}
+.platform-heading {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:20px;
+}
+.platform-heading svg {
+  width:62px;
+  height:62px;
+  flex-shrink:0;
+  filter:drop-shadow(0 5px 7px #0002);
+}
+.platform h3 {
+  font-size:clamp(21px,2.4vw,31px);
+  line-height:1.12;
+  letter-spacing:-.7px;
+  margin:0;
+}
+.platform p {
+  color:#e3f3ff;
+  font-size:15px;
+  line-height:1.5;
+  margin:0 0 18px;
+}
 .store-badge {
   display:inline-block;
-  margin-top:12px;
+  margin-top:2px;
   max-width:100%;
 }
 .store-badge img {
   display:block;
-  height:54px;
+  height:55px;
   width:auto;
   max-width:100%;
+  object-fit:contain;
+  object-position:left center;
 }
 .android-badge {
-  opacity:.5;
+  opacity:.72;
   filter:grayscale(1);
-  cursor:default;
+  pointer-events:none;
 }
 .pending {
   display:block;
-  background:#ffffff10;
-  padding:12px;
-  border-radius:6px;
+  max-width:245px;
+  background:#ffffff35;
+  color:white;
+  text-align:center;
   font-size:14px;
-  font-weight:600;
-  color:#d5e3f1;
+  font-weight:700;
+  padding:12px;
+  border-radius:8px;
   margin-top:12px;
+}
+
+/* DECORATIVE DEVICE MOCKUPS */
+
+.device {
+  position:absolute;
+  z-index:1;
+  right:-25px;
+  bottom:-24px;
+  width:42%;
+  height:84%;
+  border:9px solid #182333;
+  border-radius:31px;
+  background:#eff7ff;
+  box-shadow:-15px 18px 28px #001b4a66;
+  transform:rotate(9deg);
+  overflow:hidden;
+}
+.device:before {
+  content:"";
+  position:absolute;
+  z-index:3;
+  top:6px;
+  left:35%;
+  width:30%;
+  height:10px;
+  border-radius:20px;
+  background:#192638;
+}
+.device-screen {
+  padding:30px 9px 9px;
+  height:100%;
+  background:#f5f9ff;
+  color:#23364d;
+}
+.device-title {
+  font-weight:800;
+  font-size:12px;
+  margin:0 0 10px;
   text-align:center;
 }
+.thumb-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:5px;
+}
+.thumb {
+  aspect-ratio:1.12;
+  border-radius:5px;
+  background:linear-gradient(135deg,#6dc4f5 5%,#165e99 60%,#a9d7a2 61%,#4c9e78);
+}
+.thumb:nth-child(2) {
+  background:linear-gradient(135deg,#f9c07b,#d6784f 48%,#567e4d 49%,#9ac276);
+}
+.thumb:nth-child(3) {
+  background:linear-gradient(150deg,#78d7e7,#42a2c9 55%,#f6e0ad 56%);
+}
+.thumb:nth-child(4) {
+  background:linear-gradient(145deg,#a3d9a1,#468f71 58%,#2b6656 59%);
+}
+.thumb:nth-child(5) {
+  background:linear-gradient(140deg,#87b3e4,#536f9d 58%,#e5d4a8 59%);
+}
+.thumb:nth-child(6) {
+  background:linear-gradient(140deg,#f5d5ac,#7aa7c3 55%,#385f7e 56%);
+}
+.device.laptop {
+  right:-45px;
+  bottom:10px;
+  width:57%;
+  height:64%;
+  border-width:9px;
+  border-radius:12px;
+  transform:perspective(700px) rotateY(-12deg) rotateZ(3deg);
+}
+.device.laptop:before {display:none}
+.device.laptop .device-screen {padding:16px 12px}
+.device.laptop .thumb-grid {
+  grid-template-columns:repeat(3,1fr);
+}
+
+/* FAQ AND FOOTER */
+
 .faq {max-width:800px;margin:auto}
-details {border-bottom:1px solid #d6e1ed;padding:24px 0}
-summary {cursor:pointer;font-size:17px;font-weight:600}
+details {
+  border-bottom:1px solid #d6e1ed;
+  padding:24px 0;
+}
+summary {
+  cursor:pointer;
+  font-size:17px;
+  font-weight:600;
+}
 details p {color:var(--muted);font-size:15px}
 footer {
   border-top:1px solid #dde6f0;
@@ -235,22 +387,34 @@ a:focus-visible,summary:focus-visible {
   outline:3px solid #3c8edb;
   outline-offset:6px;
 }
+
+/* MOBILE RESPONSIVENESS */
+
 @media(max-width:800px) {
   .wrap {padding:0 22px}
-  nav {height:80px}
+  nav {min-height:80px}
   .links>a:not(.btn) {display:none}
   .hero {grid-template-columns:1fr;padding:50px 0}
   h1 {letter-spacing:-2.5px}
-  .strip {gap:20px;flex-wrap:wrap;text-align:center}
+  .strip {gap:20px;text-align:center}
   .section {padding:60px 0}
-  .section h2 {font-size:36px}
   .steps {grid-template-columns:1fr;gap:22px}
   .story {grid-template-columns:1fr;padding:30px;gap:30px}
-  .download {padding:35px 22px}
+  .download {padding:35px 18px}
   .platforms {grid-template-columns:1fr}
+  .platform {min-height:285px}
+  .platform-copy {width:64%}
   footer {align-items:flex-start;gap:24px;flex-direction:column}
 }
 @media(max-width:480px) {
+  .platform {padding:20px;min-height:270px}
+  .platform-heading {gap:9px}
+  .platform-heading svg {width:45px;height:45px}
+  .platform h3 {font-size:22px}
+  .platform p {font-size:13px}
+  .platform .store-badge img {height:43px}
+  .device {right:-35px;width:43%}
+  .device.laptop {right:-40px;width:55%}
   .video-caption {font-size:11px}
 }
 @media(prefers-reduced-motion:reduce) {
@@ -287,12 +451,13 @@ A dedicated solution for managing your media collection
 on iPhone, Mac and Windows.
 </p>
 <div class="actions">
-<a class="btn" href="#download">Download Sortaroo <span>↗</span></a>
+<a class="btn" href="#download">Download Sortaroo ↗</a>
 <a href="#how">See how it works ↓</a>
 </div>
-<div class="quiet">Available for iPhone, macOS and Windows. Android coming soon.</div>
+<div class="quiet">
+Available for iPhone, macOS and Windows. Android coming soon.
 </div>
-
+</div>
 <div class="video-feature">
 <div class="video-frame">
 <iframe
@@ -306,7 +471,8 @@ allowfullscreen>
 </div>
 <div class="video-caption">
 <span>Sortaroo product overview</span>
-<a href="https://www.youtube.com/watch?v=9SU9s-EiYKw" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+<a href="https://www.youtube.com/watch?v=9SU9s-EiYKw"
+target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
 </div>
 </div>
 </section>
@@ -342,20 +508,19 @@ allowfullscreen>
 <section class="story">
 <div>
 <div class="eyebrow">A more organized collection</div>
-<h2 style="font-size:40px;letter-spacing:-1.5px;line-height:1.1">
-Your photos and videos.<br>A structured collection.
-</h2>
-<p style="color:var(--muted)">
-From family milestones to travel photography, your media deserves a clear structure.
-Sortaroo simplifies photo and video organization with dedicated applications
-for iPhone, Mac and Windows.
+<h2>Your photos and videos.<br>A structured collection.</h2>
+<p>
+From family milestones to travel photography, your media deserves
+a clear structure. Sortaroo simplifies photo and video organization
+with dedicated applications for iPhone, Mac and Windows.
 </p>
 <a href="#download" style="font-weight:600">View download options ↗</a>
 </div>
 <div>
 <div class="tree">
 <strong>▰ Your memories</strong>
-<div class="indent">▰ 2026
+<div class="indent">
+▰ 2026
 <div class="indent">
 ▰ Summer adventures<br>
 ▰ Family moments<br>
@@ -364,9 +529,11 @@ for iPhone, Mac and Windows.
 ▰ 2025
 </div>
 </div>
-<p class="tag" style="text-align:center">Example collection · illustrative layout</p>
+<p class="tag">Example collection · illustrative layout</p>
 </div>
 </section>
+
+<!-- REDESIGNED DOWNLOAD SECTION -->
 
 <section class="section" id="download">
 <div class="download">
@@ -376,56 +543,158 @@ for iPhone, Mac and Windows.
 
 <div class="platforms">
 
-<!-- iPHONE -->
-<div class="platform">
-<h3>Sortaroo for iPhone</h3>
-<p>Available on the App Store.</p>
+<!-- IPHONE -->
+
+<div class="platform iphone">
+<div class="platform-copy">
+<div class="platform-heading">
+<svg viewBox="0 0 64 64" aria-hidden="true">
+<path fill="white" d="M43 12c4-5 4-10 4-10s-8 1-12 6c-4 5-3 10-3 10s7 0 11-6zM51 35c0-10 8-14 8-14-4-6-10-7-12-7-6-1-10 3-15 3s-9-3-15-3C8 14 2 22 2 35c0 14 11 29 20 29 5 0 7-3 13-3 5 0 7 3 12 3 8 0 15-12 17-18-10-4-13-8-13-11z" transform="translate(2 -2) scale(.9)"/>
+</svg>
+<h3>Sortaroo<br>for iPhone</h3>
+</div>
+<p>Organize your photos and videos on the go.</p>
 <a class="store-badge"
 href="https://apps.apple.com/app/sortaroo/id6819323395"
 target="_blank" rel="noopener noreferrer">
-<img
-src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+<img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
 alt="Download on the App Store">
 </a>
 </div>
+<div class="device" aria-hidden="true">
+<div class="device-screen">
+<div class="device-title">Sortaroo</div>
+<div class="thumb-grid">
+<div class="thumb"></div><div class="thumb"></div>
+<div class="thumb"></div><div class="thumb"></div>
+<div class="thumb"></div><div class="thumb"></div>
+</div>
+</div>
+</div>
+</div>
 
 <!-- ANDROID -->
-<div class="platform">
-<h3>Sortaroo for Android</h3>
+
+<div class="platform android">
+<div class="platform-copy">
+<div class="platform-heading">
+<svg viewBox="0 0 64 64" aria-hidden="true">
+<g fill="#a7ed37">
+<rect x="12" y="23" width="40" height="30" rx="5"/>
+<rect x="17" y="47" width="8" height="15" rx="4"/>
+<rect x="39" y="47" width="8" height="15" rx="4"/>
+<rect x="2" y="26" width="8" height="26" rx="4"/>
+<rect x="54" y="26" width="8" height="26" rx="4"/>
+<path d="M12 21a20 20 0 0 1 40 0z"/>
+</g>
+<path d="M20 5l-5-5M44 5l5-5"
+stroke="#a7ed37" stroke-width="2"/>
+<g fill="#155e62">
+<circle cx="24" cy="15" r="2"/>
+<circle cx="40" cy="15" r="2"/>
+</g>
+</svg>
+<h3>Sortaroo<br>for Android</h3>
+</div>
 <p>Coming soon to Android.</p>
 <span class="store-badge android-badge">
-<img
-src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
 alt="Google Play — Coming Soon">
 </span>
 <span class="pending">Coming Soon</span>
 </div>
+<div class="device" aria-hidden="true">
+<div class="device-screen">
+<div class="device-title">Sortaroo</div>
+<div class="thumb-grid">
+<div class="thumb"></div><div class="thumb"></div>
+<div class="thumb"></div><div class="thumb"></div>
+<div class="thumb"></div><div class="thumb"></div>
+</div>
+</div>
+</div>
+</div>
 
 <!-- MAC -->
-<div class="platform">
-<h3>Sortaroo for Mac</h3>
-<p>Available on the Mac App Store.</p>
+
+<div class="platform mac">
+<div class="platform-copy">
+<div class="platform-heading">
+<svg viewBox="0 0 64 64" aria-hidden="true">
+<defs>
+<linearGradient id="finder" x2="1" y2="1">
+<stop stop-color="#69dbff"/>
+<stop offset="1" stop-color="#1964d5"/>
+</linearGradient>
+</defs>
+<rect x="2" y="2" width="60" height="60" rx="13"
+fill="url(#finder)"/>
+<path d="M33 2h16a13 13 0 0 1 13 13v34a13 13 0 0 1-13 13H33z"
+fill="#d9f5ff"/>
+<path d="M23 21v11m19-11v11"
+stroke="#17395f" stroke-width="4" stroke-linecap="round"/>
+<path d="M17 43q15 14 30 0"
+stroke="#17395f" stroke-width="3" fill="none"
+stroke-linecap="round"/>
+</svg>
+<h3>Sortaroo<br>for Mac</h3>
+</div>
+<p>Organize your photo and video library on your Mac.</p>
 <a class="store-badge"
 href="https://apps.apple.com/ca/app/sortaroo/id6751247350?mt=12"
 target="_blank" rel="noopener noreferrer">
-<img src="mac-app-store.svg" alt="Download on the Mac App Store">
+<img src="mac-app-store.svg"
+alt="Download on the Mac App Store">
 </a>
+</div>
+<div class="device laptop" aria-hidden="true">
+<div class="device-screen">
+<div class="device-title">Sortaroo</div>
+<div class="thumb-grid">
+<div class="thumb"></div><div class="thumb"></div>
+<div class="thumb"></div><div class="thumb"></div>
+<div class="thumb"></div><div class="thumb"></div>
+</div>
+</div>
+</div>
 </div>
 
 <!-- WINDOWS -->
-<div class="platform">
-<h3>Sortaroo for Windows</h3>
-<p>Available on the Microsoft Store.</p>
+
+<div class="platform windows">
+<div class="platform-copy">
+<div class="platform-heading">
+<svg viewBox="0 0 64 64" aria-hidden="true">
+<path fill="#36d4ff"
+d="M2 9l27-4v26H2zm32-5l28-4v31H34zM2 36h27v25L2 57zm32 0h28v28l-28-3z"/>
+</svg>
+<h3>Sortaroo<br>for Windows</h3>
+</div>
+<p>Organize photos and videos on your Windows PC.</p>
 <a class="store-badge"
 href="https://apps.microsoft.com/detail/9mwj96szk43j?ocid=webpdpshare"
 target="_blank" rel="noopener noreferrer">
-<img src="microsoft-store.svg" alt="Get it from Microsoft Store">
+<img src="microsoft-store.svg"
+alt="Download from the Microsoft Store">
 </a>
+</div>
+<div class="device laptop" aria-hidden="true">
+<div class="device-screen">
+<div class="device-title">Sortaroo</div>
+<div class="thumb-grid">
+<div class="thumb"></div><div class="thumb"></div>
+<div class="thumb"></div><div class="thumb"></div>
+<div class="thumb"></div><div class="thumb"></div>
+</div>
+</div>
+</div>
 </div>
 
 </div>
 </div>
 </section>
+
+<!-- FAQ -->
 
 <section class="section faq" id="questions" style="padding-top:0">
 <div class="eyebrow">Frequently asked questions</div>
