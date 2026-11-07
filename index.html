@@ -5,9 +5,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="sortaroo-logo.png" type="image/png">
-<title>Sortaroo — Photo and Video Organization</title>
-<meta name="description" content="Organize your photos and videos with Sortaroo for iPhone, Mac and Windows. Android coming soon.">
+<title>Sort &amp; Organize Photos and Videos | Sortaroo</title>
+<meta name="description" content="Sort and organize your photos and videos with Sortaroo, a photo and video organizer for iPhone, Mac and Windows. Android coming soon.">
+<link rel="canonical" href="https://sortaroo.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sortaroo">
+<meta property="og:url" content="https://sortaroo.com/">
+<meta property="og:title" content="Sort &amp; Organize Photos and Videos | Sortaroo">
+<meta property="og:description" content="Sort and organize photos and videos on iPhone, Mac and Windows with Sortaroo.">
+<meta property="og:image" content="https://sortaroo.com/sortaroo-logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sort &amp; Organize Photos and Videos | Sortaroo">
+<meta name="twitter:description" content="Sort and organize photos and videos on iPhone, Mac and Windows with Sortaroo.">
+<meta name="twitter:image" content="https://sortaroo.com/sortaroo-logo.png">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://sortaroo.com/#organization",
+      "name": "Sortaroo",
+      "url": "https://sortaroo.com/",
+      "logo": "https://sortaroo.com/sortaroo-logo.png",
+      "sameAs": [
+        "https://www.tiktok.com/@sortaroo",
+        "https://www.instagram.com/sortaroo/",
+        "https://www.facebook.com/people/Sortaroo/61586612194239/",
+        "https://www.youtube.com/@sortaroo"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://sortaroo.com/#software",
+      "name": "Sortaroo",
+      "url": "https://sortaroo.com/",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "iOS, macOS, Windows",
+      "description": "Sortaroo helps users sort and organize photos and videos on iPhone, Mac and Windows.",
+      "publisher": {
+        "@id": "https://sortaroo.com/#organization"
+      },
+      "downloadUrl": [
+        "https://apps.apple.com/app/sortaroo/id6819323395",
+        "https://apps.apple.com/ca/app/sortaroo/id6751247350?mt=12",
+        "https://apps.microsoft.com/detail/9mwj96szk43j?ocid=webpdpshare"
+      ]
+    }
+  ]
+}
+</script>
 <style>
 :root {
   --ink:#23364d;
@@ -82,10 +130,10 @@ footer a:hover {
 
 .hero {
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr;
   align-items:center;
-  gap:45px;
-  padding:85px 0 65px;
+  gap:30px;
+  padding:70px 0 35px;
 }
 .eyebrow {
   font-size:11px;
@@ -134,6 +182,14 @@ p {line-height:1.65}
 .text-link:hover {text-decoration:underline}
 .quiet {font-size:12px;color:var(--muted)}
 .video-feature {min-width:0}
+.video-section {padding:12px 0 65px}
+.video-section h2 {font-size:clamp(28px,3.2vw,40px);letter-spacing:-1.5px;margin:12px 0 24px}
+.video-grid {display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.video-feature h3 {font-size:19px;margin:0 0 14px}
+.video-frame-portrait {display:flex;justify-content:center;align-items:center;background:#e5f1fc}
+.video-frame-portrait iframe {width:auto;height:100%;aspect-ratio:9/16;max-width:100%}
+.social-links {display:flex;gap:14px;flex-wrap:wrap}
+.social-links a {text-decoration:underline;text-underline-offset:3px}
 .video-frame {
   aspect-ratio:16/9;
   background:#e5f1fc;
@@ -331,7 +387,9 @@ a:focus-visible,summary:focus-visible {
   .logo img {width:46px;height:46px}
   .links>a:not(.btn) {display:none}
   .links .btn {padding:13px 16px;font-size:12px}
-  .hero {grid-template-columns:1fr;padding:50px 0}
+  .hero {grid-template-columns:1fr;padding:50px 0 20px}
+  .video-grid {grid-template-columns:1fr;gap:32px}
+  .video-section {padding:10px 0 50px}
   h1 {letter-spacing:-2.5px}
   .strip {gap:20px;text-align:center}
   .section {padding:60px 0}
@@ -377,15 +435,14 @@ a:focus-visible,summary:focus-visible {
     <div class="eyebrow">Photo &amp; video organization</div>
 
     <h1>
-      Photo organization.
+      Sort &amp; organize photos and videos.
       <br>
       <em>Simplified.</em>
     </h1>
 
     <p class="intro">
-      Organize your photos and videos with Sortaroo.
-      A dedicated solution for managing your media collection
-      on iPhone, Mac and Windows.
+      Sort your photos and videos, organize your collection, and make your digital memories easier to manage.
+      Sortaroo is available for iPhone, Mac and Windows.
     </p>
 
     <div class="actions">
@@ -399,7 +456,32 @@ a:focus-visible,summary:focus-visible {
     </div>
   </div>
 
+
+</section>
+
+
+<section class="video-section" aria-labelledby="videos-title">
+  <div class="eyebrow">Product demonstrations</div>
+  <h2 id="videos-title">See Sortaroo in action</h2>
+  <div class="video-grid">
   <div class="video-feature">
+    <h3>How to sort and organize photos and videos on iPhone</h3>
+    <div class="video-frame video-frame-portrait">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/YQUbLRAfFfU"
+        title="Sortaroo for iPhone video tutorial"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+    <div class="video-caption">
+      <span>Sortaroo iPhone tutorial</span>
+      <a href="https://www.youtube.com/shorts/YQUbLRAfFfU" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+    </div>
+  </div>
+  <div class="video-feature">
+    <h3>Sortaroo desktop overview</h3>
     <div class="video-frame">
       <iframe
         src="https://www.youtube-nocookie.com/embed/9SU9s-EiYKw"
@@ -420,12 +502,13 @@ a:focus-visible,summary:focus-visible {
       </a>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- BENEFITS -->
 
 <div class="strip">
-  <span>PHOTOS + VIDEOS</span>
+  <span>SORT + ORGANIZE PHOTOS &amp; VIDEOS</span>
   <span>IPHONE + MAC + WINDOWS</span>
   <span>LESS DIGITAL CLUTTER</span>
 </div>
@@ -434,9 +517,9 @@ a:focus-visible,summary:focus-visible {
   <div class="eyebrow">Photo and video management</div>
 
   <h2>
-    Bring structure to
+    Sort and organize
     <br>
-    your media collection.
+    your photo and video collection.
   </h2>
 
   <div class="steps">
@@ -448,8 +531,8 @@ a:focus-visible,summary:focus-visible {
 
     <div class="step">
       <span class="num">02</span>
-      <h3>Organize with Sortaroo.</h3>
-      <p>Use Sortaroo to bring structure to your photo and video collection.</p>
+      <h3>Sort and organize.</h3>
+      <p>Use Sortaroo to sort your photos and videos and bring structure to your collection.</p>
     </div>
 
     <div class="step">
@@ -471,7 +554,7 @@ a:focus-visible,summary:focus-visible {
     <p>
       From family milestones to travel photography,
       your media deserves a clear structure.
-      Sortaroo simplifies photo and video organization
+      Sortaroo helps you sort and organize photos and videos
       with dedicated applications for iPhone, Mac and Windows.
     </p>
 
@@ -506,7 +589,7 @@ a:focus-visible,summary:focus-visible {
 
     <h2>Find Sortaroo for your device.</h2>
 
-    <p>Download Sortaroo from the official app stores.</p>
+    <p>Sort and organize photos and videos on iPhone, Mac and Windows. Download Sortaroo from the official app stores. Android coming soon.</p>
 
     <div class="platforms">
 
@@ -583,6 +666,16 @@ a:focus-visible,summary:focus-visible {
   </details>
 
   <details>
+    <summary>Can Sortaroo sort and organize both photos and videos?</summary>
+    <p>Yes. Sortaroo is designed to help you sort and organize your photo and video collection.</p>
+  </details>
+
+  <details>
+    <summary>Can I use Sortaroo on iPhone, Mac or Windows?</summary>
+    <p>Yes. Sortaroo is available for iPhone, macOS and Windows. Use the download section above to find the version for your device.</p>
+  </details>
+
+  <details>
     <summary>Is Sortaroo available for Android?</summary>
     <p>
       Sortaroo for Android is coming soon.
@@ -623,11 +716,15 @@ a:focus-visible,summary:focus-visible {
     sortaroo
   </a>
 
-  <span>Photo and video organization.</span>
+  <span>Photo and video sorting &amp; organization.</span>
 
   <div>
     <a href="https://privacy.sortaroo.com">Privacy</a>
     <a href="https://support.sortaroo.com">Support</a>
+    <a href="https://www.tiktok.com/@sortaroo" target="_blank" rel="noopener noreferrer" aria-label="Sortaroo on TikTok">TikTok</a>
+    <a href="https://www.instagram.com/sortaroo/" target="_blank" rel="noopener noreferrer" aria-label="Sortaroo on Instagram">Instagram</a>
+    <a href="https://www.facebook.com/people/Sortaroo/61586612194239/" target="_blank" rel="noopener noreferrer" aria-label="Sortaroo on Facebook">Facebook</a>
+    <a href="https://www.youtube.com/@sortaroo" target="_blank" rel="noopener noreferrer" aria-label="Sortaroo on YouTube">YouTube</a>
     <span>© 2026 Sortaroo</span>
   </div>
 </footer>
